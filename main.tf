@@ -27,7 +27,7 @@ resource "aws_instance" "example" {
 
     connection {
       type     = "ssh"
-      user     = "ec2-user"  # Change to your EC2 instance's SSH user
+      user     = "ec2-user" #ubuntu root user
       password = var.ssh_password
       host     = element(var.instance_ips, count.index)
     }
